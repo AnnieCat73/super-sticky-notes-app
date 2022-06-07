@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-family: "Montserrat", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: #eee;
+  padding: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color: #f5ba13;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+/*AppControls*/
+
+.app-controls {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 0 40px;
+}
+
+.add-btn {
+  border-radius: 5px;
+  border-top-color: #ccc;
+  border-bottom-color: #ccc;
+  border-left-color: #ccc;
+  border-right-color: #ccc;
+  cursor: pointer;
+  padding: 8px;
+  font-weight: bold;
+  background-color: #fff;
+  outline: none;
+}
+
+.search {
+  font-size: 14px;
+  padding: 5px;
+  margin: 8px;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+
+/*NOTES*/
+
+/********Original note**********/
+form {
+  font-family: "Permanent Marker", cursive;
+  width: 200px;
+  height: 200px;
+  margin: 30px 0 40px 40px;
+  background-color: lightyellow;
+  border: 0px solid grey;
+  box-shadow: 2px 2px 3px lightgrey;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 
-.App-link {
-  color: #61dafb;
+form input,
+form textarea {
+  background-color: lightyellow;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Yellow notes being created*/
+.note {
+  font-family: "Permanent Marker", cursive;
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  margin-left: 40px;
+  background-color: lightyellow;
+  border: 1px solid grey;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  float: left;
+}
+
+.title {
+  border-bottom: 2px solid #eee;
+}
+
+.title,
+textarea {
+  font-size: 16px;
+  font-weight: bold;
+  padding: .3em;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.note-delete {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-size: 18px;
+  color: lightgrey;
+  padding: 5px;
+  background: transparent;
+  border: 0;
+}
+
+.note-delete:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.note h1,
+.note p {
+  font-size: 1.1em;
+  font-size: 16px;
+  font-weight: bold;
+  padding: .3em;
+  color: rgb(121, 118, 118);
+}
+
+.note h1 {
+  margin-bottom: 6px;
+  border-bottom: 2px solid;
+}
+
+.note p {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/*Footer*/
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
 }
